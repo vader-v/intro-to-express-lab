@@ -21,10 +21,10 @@ app.get('/', function(req, res) {
   res.send('<h1>sup dawg</h1>')
 })
 app.get('/home', function(req, res) {
-  res.render('home')
+  res.send('<h1> Home Page </h1>')
 })
 app.get('/students', function(req, res) {
-  res.send('students/index', {
+  res.render('students/index', {
     //students (what we are defining) : students (the actual data)
     students
   })
