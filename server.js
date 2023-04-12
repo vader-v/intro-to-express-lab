@@ -2,7 +2,7 @@
 
 import express from 'express'
 import { students } from './data/student-data.js'
-import * as studentsData from './data/student-data.js'
+
 // create Express app
 
 const app = express()
