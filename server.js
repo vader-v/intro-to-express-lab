@@ -2,6 +2,7 @@
 
 import express from 'express'
 import { students } from './data/student-data.js'
+import * as studentsData from './data/student-data.js'
 // create Express app
 
 const app = express()
@@ -18,15 +19,15 @@ app.set('view engine', 'ejs')
 // mount routes
 
 app.get('/', function(req, res) {
-  res.send('<h1>sup dawg</h1>')
+  res.send('<h1>Hi</h1>')
 })
 app.get('/home', function(req, res) {
-  res.send('<h1> Home Page </h1>')
+  res.render('home')
 })
 app.get('/students', function(req, res) {
   res.render('students/index', {
     //students (what we are defining) : students (the actual data)
-    students
+    students : students
   })
 })
 
